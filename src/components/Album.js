@@ -98,7 +98,14 @@ class Album extends Component {
   mouseLeave(index) {
     this.setState({ hovered: null });
   }
-
+  formatTime(seconds) {
+    if(typeof(parseInt(seconds)) !== 'number') {
+      return '-:--'
+    }
+    let minute = Math.floor(seconds / 60);
+    let second = Math.floor(seconds % 60);
+    return `${minute}:${second}`;
+  }
   button(index) {
     if(!this.state.isPlaying && this.state.hovered === index) {
       return <ion-icon name="arrow-dropright-circle"></ion-icon>;
@@ -132,7 +139,7 @@ class Album extends Component {
               <tr key={index} className="song" onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.mouseOver(index)} onMouseLeave={() => this.mouseLeave(index)}>
                 <td>{this.button(index)}</td>
                 <td>{song.title}</td>
-                <td>{(song.duration/60).toFixed(1)}minutes</td>
+                <td>{this.formatTime(song.duration)}</td>
               </tr>
             )
           }
@@ -149,6 +156,8 @@ class Album extends Component {
           handleNextClick={() => this.handleNextClick()}
           handleTimeChange={(e) => this.handleTimeChange(e)}
           handleVolumeChange={(e) => this.handleVolumeChange(e)}
+          formattedCurrentTime={() => this.formatTime(this.state.currentTime)}
+          formattedDuration={() => this.formatTime(this.state.duration)}
         />
       </section>
     );
