@@ -14,8 +14,7 @@ class Album extends Component {
       currentTime: 0,
       duration: album.songs[0].duration,
       isPlaying: false,
-      hovered: album.songs.map(index => {
-        return false })
+      hovered: null
     };
     this.audioElement = document.createElement('audio');
     this.audioElement.src = album.songs[0].audioSrc;
@@ -83,25 +82,20 @@ class Album extends Component {
   this.setState({ currentTime: newTime });
 }
   mouseOver(index) {
-    let newState = [...this.state.hovered];
-    newState[index] = true;
-    this.setState({ hovered: newState });
+    this.setState({ hovered: index });
   }
 
   mouseLeave(index) {
-    let newState = [...this.state.hovered];
-    newState[index] = false;
-    this.setState({ hovered: newState });
+    this.setState({ hovered: null });
   }
 
   button(index) {
-    let button = index + 1;
-    if(!this.state.isPlaying && this.state.hovered[index]) {
-      button = <ion-icon name="arrow-dropright-circle"></ion-icon>;
-    } else if (this.state.isPlaying && this.state.hovered[index]) {
-      button = <ion-icon name="pause"></ion-icon>;
+    if(!this.state.isPlaying && this.state.hovered === index) {
+      return <ion-icon name="arrow-dropright-circle"></ion-icon>;
+    } else if (this.state.isPlaying && this.state.hovered === index) {
+      return <ion-icon name="pause"></ion-icon>;
     }
-    return <span>{button}</span>
+    return index + 1;
   }
 
   render() {
