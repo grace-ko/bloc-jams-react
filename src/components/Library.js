@@ -14,17 +14,22 @@ class Library extends Component {
     return (
       <section className='library'>
         <div className='top-bar'></div>
-          {
-            this.state.albums.map((album, index) =>
-              <div className="container" key={index}>
-                <img src={album.albumCover} alt={album.title} />
-                <p>{album.title} - {album.artist}</p>
-                <Link to={`/album/${album.slug}`}>
-                <div className="icon"><ion-icon name="arrow-dropright-circle"></ion-icon></div>
-                </Link>
-              </div>
-            )
-          }
+          <div className="album-list">
+            {
+              this.state.albums.map((album, index) =>
+                <div className="container" key={index}>
+                <div className="album">
+                  <p className="artist">{album.artist}</p>
+                  <img src={album.albumCover} alt={album.title} />
+                  <p>{album.title}</p>
+                  <Link to={`/album/${album.slug}`}>
+                  <div className="listen">LISTEN</div>
+                  </Link>
+                  </div>
+                </div>
+              )
+            }
+          </div>
       </section>
     );
   }

@@ -1,6 +1,6 @@
 
 html {
-  background: url(/assets/images/background-1.jpg) no-repeat center center fixed; 
+  background: url(/assets/images/background-1.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -51,8 +51,8 @@ html {
   left: 30px;
   top: 0px;
   color: white;
-
 }
+
 nav {
   position: absolute;
   right: 30px;
