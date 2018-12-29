@@ -104,6 +104,9 @@ class Album extends Component {
     }
     let minute = Math.floor(seconds / 60);
     let second = Math.floor(seconds % 60);
+    if (second < 10) {
+      second = `0${second}`
+    }
     return `${minute}:${second}`;
   }
   button(index) {
