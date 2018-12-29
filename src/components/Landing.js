@@ -1,23 +1,17 @@
 import React from 'react';
-
+import './../Landing.css';
 
 const Landing = () => (
-  <section className="landing">
-    <h1 className="hero-title">Turn the music up!</h1>
     <section className="selling-points">
-      <div className="point">
-        <h2 className="point-title">Choose your music</h2>
-        <p className="point-description">The world is full of music; why should you have to listen to music that someone else chose?</p>
+      <div className="point landing">
+        <h2 className="point-title">Unlimited Ad-Free</h2>
+        <h2 className="point-title">Music Streaming</h2>
+        <p className="point-description">No limits. No distractions.</p>
+        <p className="point-description">Available on all mobile platforms</p>
+        <a href="/library"><p className="start-button">GET STARTED</p></a>
       </div>
-      <div className="point">
-        <h2 className="point-title">Unlimited, streaming, ad-free</h2>
-        <p className="point-description">No arbitrary limits. No distractions.</p>
-      </div>
-      <div className="point">
-        <h2 className="point-title">Mobile enabled</h2>
-        <p className="point-description">Listen to your music on the go. This streaming service is available on all mobile platforms.</p>
-      </div>
+      <a href="https://unsplash.com/@arstyy?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge" target="_blank"><p className="photo-credit">Photo credit: Austin Neill</p></a>
     </section>
-  </section>
+
 );
 export default Landing;

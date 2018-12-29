@@ -1,0 +1,69 @@
+
+html {
+  background: url(/assets/images/background-1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.logo {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.photo-credit {
+  color: #000;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  font-size: 10px;
+}
+
+.landing {
+  position: fixed;
+  width: 30%;
+  right: 5%;
+  top: 40%;
+}
+.point {
+  color: white;
+  text-align: left;
+}
+.start-button {
+  border: 1px solid white;
+  color: white;
+  padding: 15px;
+  margin-top: 0px;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.point-title {
+  margin-top: -40px;
+  font-size: 40px;
+}
+.point-description{
+  font-size: 20px;
+  margin-top: -20px;
+}
+.logo {
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  color: white;
+
+}
+nav {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+a {
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+.link {
+  font-size: 15px;
+  color: white;
+}

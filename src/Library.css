@@ -1,0 +1,28 @@
+.library {
+  background-color: #fff;
+  width: 100%;
+  margin-top: -20px;
+  height: 100vh;
+}
+img {
+  width: 300px;
+  margin-top: 50px;
+}
+
+.container {
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 10%;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.icon {
+  color: black;
+  background-color: white;
+  display: inline-block;
+  margin-top: -10px;
+  font-size: 40px;
+  padding: 10px;
+  width: 50px;
+}

@@ -21,7 +21,6 @@ class Album extends Component {
     this.audioElement.src = album.songs[0].audioSrc;
     this.audioElement.volume = 0;
   }
-
   play() {
     this.audioElement.play();
     this.setState({ isPlaying: true });

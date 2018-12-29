@@ -11,10 +11,11 @@ class App extends Component {
       <div className="App">
         <header>
           <nav>
-            <Link to='/'>Landing</Link>
-            <Link to='/library'>Library</Link>
+            <a href="https://github.com/grace-ko" target="_blank" className="link">ABOUT</a>
+            <Link to='/' className="link">LANDING</Link>
+            <Link to='/library' className="link">LIBRARY</Link>
           </nav>
-          <h1>Bloc Jams</h1>
+          <Link to="/"><h1 className="logo">Bloc Jams</h1></Link>
         </header>
         <main>
           <Route exact path="/" component={Landing} />
