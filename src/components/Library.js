@@ -13,7 +13,6 @@ class Library extends Component {
   render() {
     return (
       <section className='library'>
-        <div className='top-bar'></div>
           <div className="album-list">
             {
               this.state.albums.map((album, index) =>

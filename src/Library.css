@@ -1,10 +1,10 @@
 .library {
-  background: url(/assets/images/smoke.jpg) no-repeat center center fixed;
+  background: url(/assets/images/smoke.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width: 100%;
+  min-width: 100vw;
   position: absolute;
   min-height: 100vh;
   top: 0;
@@ -21,14 +21,19 @@ img {
   letter-spacing: 2px;
 }
 
+.album-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .container {
   display: inline-block;
   margin: 20px;
-  margin-top: 15%;
   padding: 20px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  z-index: -1 !important;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .listen {
