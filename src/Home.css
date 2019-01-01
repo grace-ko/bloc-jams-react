@@ -69,3 +69,28 @@ a {
   font-size: 15px;
   color: white;
 }
+
+@media (max-width: 1123px) {
+  .point-title {
+    font-size: 30px;
+    margin: 0;
+  }
+  .point-description {
+    margin: 0;
+  }
+  .start-button {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .landing {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: right;
+  }
+  nav {
+    right: 10px;
+  }
+}

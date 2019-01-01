@@ -11,8 +11,8 @@ class App extends Component {
       <div className="App">
         <header>
           <nav>
-            <a href="https://github.com/grace-ko" target="_blank" className="link">ABOUT</a>
-            <Link to='/' className="link">HOME</Link>
+            <a href="https://github.com/grace-ko" target="_blank" className="link hide">ABOUT</a>
+            <Link to='/' className="link hide">HOME</Link>
             <Link to='/library' className="link">LIBRARY</Link>
           </nav>
           <Link to="/"><h1 className="logo">Bloc Jams</h1></Link>

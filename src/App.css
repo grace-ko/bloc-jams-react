@@ -16,7 +16,6 @@ nav, .logo {
   color: white;
 }
 
-
 .App-link {
   color: #61dafb;
 }
@@ -27,5 +26,15 @@ nav, .logo {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 815px) {
+  .hide {
+    display: none;
+  }
+  .logo {
+    font-size: 20px;
+    margin-top: 30px;
   }
 }

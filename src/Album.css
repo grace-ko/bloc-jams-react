@@ -1,53 +1,82 @@
-.album-container {
-  background: url(/assets/images/album.jpg) no-repeat center center fixed;
+.album-page {
+  background: url(/assets/images/smoke.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width: 100%;
+  min-width: 100vw;
   position: absolute;
   min-height: 100vh;
   top: 0;
   left: 0;
-  color: white;
+  overflow: auto;
 }
 
+.album-container {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  overflow: auto;
+}
+.cover-image, .album-details {
+  display: inline-block;
+}
+.cover-image {
+  float: left;
+  overflow: auto;
+}
 table {
   margin: auto;
   text-align: left;
 }
-.top {
-  background-color: rgb(199, 9, 111, 0.7);
-  width: 100%;
-  height: 100px;
+.index {
+  padding-right: 10px;
 }
-.cover-image, .album-details {
-  display: inline-block;
-  position: absolute;
+.song-title {
+  padding-right: 40px;
 }
-.cover-image {
-  left: 0;
+h1 {
+  margin-bottom: -10px;
 }
-.album-details {
-  right: 0;
+#release-info {
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
-#album-info {
-  background-color: red;
-  position: relative;
-  height: 100px;
-
-}
-.album-details {
-  background-color: yellow;
-
+.custom-icon {
+  font-size: 20px;
+  border-radius: 2px;
+  text-decoration: none;
 }
 
-.album2 {
-  overflow: scroll;
-  background-color: #1a1a1a;
-  position: fixed;
-  width: 50%;
-  top: 400px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media (max-width: 1040px) {
+  img {
+    width: 200px;
+  }
+}
+@media (max-width: 815px) {
+  .album-container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .cover-image {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+  }
+  .album-details {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 500px) {
+  .album-container {
+    width: 80%;
+  }
 }

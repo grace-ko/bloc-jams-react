@@ -8,6 +8,7 @@
   position: absolute;
   min-height: 100vh;
   top: 0;
+  overflow: auto;
 }
 
 img {
@@ -26,19 +27,38 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .container {
   display: inline-block;
   margin: 20px;
+  margin-top: 200px;
   padding: 20px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.4);
+  overflow-x: auto;
 }
 
 .listen {
   color: white;
   background-color: #c7096f;
+  width: 40%;
   padding: 15px 40px;
-  display: inline-block;
+  margin: auto;
+}
+
+@media (max-width: 815px) {
+  .album-list {
+    margin-top: 50px;
+  }
+  .container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 567px) {
+  .album-list {
+    margin-top: 300px;
+  }
 }

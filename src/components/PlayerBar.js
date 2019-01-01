@@ -6,17 +6,18 @@ class PlayerBar extends Component {
       <section className="player-bar">
         <section id="buttons">
           <button id="previous" onClick={this.props.handlePrevClick}>
-            <ion-icon name="skip-backward"></ion-icon>
+            <i class="icon ion-md-skip-backward custom-icon"></i>
           </button>
           <button id="play-pause" onClick={this.props.handleSongClick}>
-            <ion-icon name={this.props.isPlaying ? 'pause' : 'play'}></ion-icon>
+            <i class={this.props.isPlaying ? 'icon ion-md-pause custom-icon' : 'icon ion-md-play custom-icon'}></i>
           </button>
           <button id="next" onClick={this.props.handleNextClick}>
-            <ion-icon name="skip-forward"></ion-icon>
+            <i class="icon ion-md-skip-forward custom-icon"></i>
           </button>
         </section>
         <section id="time-control">
           <div className="current-time">{this.props.formattedCurrentTime(this.props.currentTime)}</div>
+          <ion-icon name="rewind"></ion-icon>
           <input
             type="range"
             className="seek-bar"
@@ -26,9 +27,10 @@ class PlayerBar extends Component {
             step="0.01"
             onChange={this.props.handleTimeChange}
           />
-          <div className="total-time">{this.props.formattedDuration(this.props.duration)}</div>
+          <ion-icon name="fastforward"></ion-icon>
         </section>
         <section id="volume-control">
+          <div className="total-time">{this.props.formattedDuration(this.props.duration)}</div>
           <ion-icon name="volume-low"></ion-icon>
           <input
             type="range"
