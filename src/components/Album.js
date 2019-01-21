@@ -121,6 +121,7 @@ class Album extends Component {
   render() {
     return(
       <section className="album-page">
+        <div className="top"></div>
         <section className="album-container">
           <section id="album-info">
             <div className="cover-image">

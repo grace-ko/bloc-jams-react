@@ -1,48 +1,28 @@
-.library {
-  background: url(/assets/images/smoke.jpeg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-width: 100vw;
-  position: absolute;
-  min-height: 100vh;
-  top: 0;
-  overflow: auto;
-}
 
 img {
   width: 300px;
   margin-top: 20px;
 }
-
 .artist {
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 2px;
 }
 
-.album-list {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-
 .container {
   display: inline-block;
-  margin: 20px;
-  margin-top: 200px;
+  margin: 50px 20px;
   padding: 20px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.4);
+  border: solid 1px #781e29;
   overflow-x: auto;
 }
-
+.current-albums {
+  font-size: 50px;
+}
 .listen {
   color: white;
-  background-color: #c7096f;
+  background-color: #781e29;
   width: 40%;
   padding: 15px 40px;
   margin: auto;
@@ -59,6 +39,6 @@ img {
 
 @media (max-width: 567px) {
   .album-list {
-    margin-top: 300px;
+    margin-top: 50px;
   }
 }

@@ -1,30 +1,19 @@
-
-html {
-  background: url(/assets/images/background-1.jpg) no-repeat center center fixed;
+.home-container {
+  background: url(/assets/images/background-1.jpg) no-repeat center bottom fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  margin-top: -50px;
+  height: 900px;
 }
 .logo {
   font-family: 'Gloria Hallelujah', cursive;
 }
-
-.photo-credit {
-  color: #000;
-  position: fixed;
-  bottom: 0;
-  right: 10px;
-  font-size: 10px;
-}
-
 .landing {
-  position: fixed;
-  width: 30%;
-  right: 5%;
-  top: 40%;
+  position: absolute;
+  right: 100px;
+  top: 400px;
 }
-
 .point {
   color: white;
   text-align: left;
@@ -82,15 +71,22 @@ a {
     margin-top: 20px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .landing {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    text-align: right;
+    right: 20px;
   }
-  nav {
-    right: 10px;
+}
+@media (max-width: 500px) {
+  .home-container {
+    background: url(/assets/images/background-1.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 500px;
+  }
+  .landing {
+    top: 200px;
+    text-align: right;
   }
 }

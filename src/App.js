@@ -13,13 +13,18 @@ class App extends Component {
           <nav>
             <a href="https://github.com/grace-ko" target="_blank" className="link hide">ABOUT</a>
             <Link to='/' className="link hide">HOME</Link>
-            <Link to='/library' className="link">LIBRARY</Link>
           </nav>
           <Link to="/"><h1 className="logo">Bloc Jams</h1></Link>
         </header>
         <main>
-          <Route exact path="/" component={Home} />
-          <Route path="/library" component={Library} />
+          <Route exact path="/" render={props =>
+            <div>
+              <div className="home-container">
+                <Home />
+              </div>
+                <Library />
+            </div>
+          } />
           <Route path="/album/:slug" component={Album} />
         </main>
       </div>
